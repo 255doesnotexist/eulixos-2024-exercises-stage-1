@@ -23,7 +23,7 @@ conditional_jump (int a, int b)
   // >>> 替换 PLACEHOLDER 为合适的指令完成注释的功能
   __asm__ volatile (
       // 实现 a >= b,跳转到 greater_equal
-      "PLACEHOLDER\n"
+      "bge %1, %2, greater_equal\n" // bge assembly: if a >= b, jump to greater_equal
       "mv %0, %2\n"
       "j end\n"
       "greater_equal:\n"
