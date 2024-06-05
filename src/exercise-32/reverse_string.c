@@ -20,7 +20,8 @@ reverse_string (char *str)
     {
       temp = str[i];
       // >>> 在这里编写调换的功能
-
+      str[i] = str[len - i - 1];
+      str[len - i - 1] = temp;
       // <<<
     }
 }
