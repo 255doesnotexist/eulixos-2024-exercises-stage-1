@@ -10,8 +10,11 @@ static int
 factorial (int n)
 {
   /* >>> 实现 factorial 算法。*/
-
-
+  int ret = 1;
+  for (int i = 1; i <= n; i++) {
+    ret *= i;
+  }
+  return ret;
   /* <<<  */
 }
 
