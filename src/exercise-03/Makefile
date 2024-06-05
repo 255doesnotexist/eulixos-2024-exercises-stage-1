@@ -16,17 +16,18 @@ TEST_TARGET = $(OUTPUT_DIR)/exercise-03_test
 
 all: $(TARGET)
 
-$(TARGET): $(OBJS)
-	# 在这里指定 TARGET 的构建命令
+$(TARGET): $(OBJS) $(LIB_OBJS)
 	$(CC) $(LDFLAGS) -o $@ $^
 
-$(TEST_TARGET): $(TEST_OBJS)
-	# 在这里指定 TEST_TARGET 的构建命令
+$(TEST_TARGET): $(TEST_OBJS) $(LIB_OBJS)
 	$(CC) $(LDFLAGS) -o $@ $^
 
 %.o: %.c
-	# 在这里指定所有 C 文件的编译命令
-	$(CC) $(CFLAGS) $(INCLUDES) -c -o $@ $<
+	$(CC) $(CFLAGS) -c $< -o $@
+
+%.a: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+	ar rcs $@ $@
 
 test: $(TEST_TARGET)
 	./$(TEST_TARGET)
