@@ -25,8 +25,8 @@
 
 ``` shell
 make
-insmod factorial.ko
-rmmod factorial.ko factorial_input=N # 1,2,3,4,5,6,7, etc
+insmod factorial.ko factorial_input=N # 1,2,3,4,5,6,7, etc
+rmmod factorial.ko
 ```
 
 

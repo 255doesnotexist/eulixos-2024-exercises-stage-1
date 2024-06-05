@@ -25,8 +25,8 @@
 
 ``` shell
 make
-insmod average_input.ko average_input=1,2,3,4,5
-rmmod average_input.ko
+insmod average.ko average_input=1,2,3,4,5
+rmmod average.ko
 ```
 
 ## 如何通过测试

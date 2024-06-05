@@ -15,8 +15,9 @@ static int
 average (int arr[], int size)
 {
   /* >>> 求并返回平均数 */
- 
- 
+ int ret = 0; int *end = arr + size;
+ for (; arr != end; ++arr) ret += *arr;
+ return ret / size;
   /* <<< */
 }
 

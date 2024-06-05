@@ -25,8 +25,8 @@
 
 ``` shell
 make
-insmod reverse_string.ko
-rmmod reverse_string.ko reverse_string_input="hello"
+insmod reverse_string.ko reverse_string_input="hello"
+rmmod reverse_string.ko
 ```
 
 ## 如何通过测试
