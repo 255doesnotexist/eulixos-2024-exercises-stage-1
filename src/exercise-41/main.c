@@ -13,9 +13,9 @@ gcd (int a, int b)
       // 用于循环条件判断的标签
       "loop:\n\t"
       // 判断 a 和 b 是否相等，如果相等，则跳出循环
-      "PLACEHOLDER\n\t"
+      "beq %0, %1, end\n\t" // beq assembly: if a == b, jump to end
       // 判断 b 是否小于 a,跳到 a_greater
-      "PLACEHOLDER\n\t"
+      "blt %1, %0, a_greater\n\t" // blt assembly: if b < a, jump to a_greater
       // 如果 a 小于 b，则执行 b = b - a
       "sub %2, %2, %1\n\t"
       "jal x0, loop\n\t"
