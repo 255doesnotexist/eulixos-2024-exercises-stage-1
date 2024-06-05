@@ -23,7 +23,7 @@
 ``` shell
 make
 insmod delay.ko
-rmmod dealy.ko
+rmmod delay.ko
 ```
 
 ## 如何通过测试
