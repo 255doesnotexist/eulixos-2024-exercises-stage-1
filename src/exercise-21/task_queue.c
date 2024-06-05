@@ -45,6 +45,8 @@ reverse_task_queue_by_group (TaskNode *head, int k)
           if (tail == NULL)
             {
               // 在这里填写代码
+              return hair->next;
+              // short return because of no enough segment to process 
             }
         }
 
@@ -56,11 +58,15 @@ reverse_task_queue_by_group (TaskNode *head, int k)
         {
           TaskNode *temp = p->next;
           // 在这里填写代码
+          p->next = prev;  // reverse (make next to previous one) 
+          prev = p; // backup previous one
+          p = temp; // go next
         }
 
       pre->next = tail;
 
       // 在这里填写代码
+      pre = head; // update pre to head (backup head to pre)
 
       head = next;
     }
