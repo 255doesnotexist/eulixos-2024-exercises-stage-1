@@ -1,6 +1,6 @@
 version: '1.0'
-name: test
-displayName: test
+name: test_1
+displayName: test_1
 triggers:
   trigger: auto
   push:
